@@ -1,0 +1,39 @@
+databaseChangeLog:
+- preConditions:
+  - runningAs:
+      username: kcbrewron
+- changeSet:
+    id: 1
+    author: kcbrewron
+    changes:
+    - createSchema:
+    - createTable:
+        tableName: TB_USER
+        columns:
+        - column:
+            name: id
+            type: long
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+              id: true
+              nullable: false
+        - column:
+            name: FIRST_NAME
+            type: varchar(50)
+            constraints:
+              nullable: false
+        - column:
+            name: LAST_NAME
+            type: varchar(50)
+            constraints:
+              nullable: false
+        - column:
+            name: USER_NAME
+            type: varchar(50)
+        - column:
+            name: EMAIL_ADDRESS
+            type: varchar(100)
+            constraints:
+              nullable: false
+            
